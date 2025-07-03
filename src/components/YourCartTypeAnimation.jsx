@@ -5,7 +5,7 @@ export default function YourCartTypingAnimation() {
   const roles = ["User", "Retailer"];
 
   const [text, setText] = useState("");
-  const [phase, setPhase] = useState("typingRole"); // typingRole | backspaceRole
+  const [phase, setPhase] = useState("typingRole"); 
   const [typingIndex, setTypingIndex] = useState(0);
   const [roleIndex, setRoleIndex] = useState(0);
 
@@ -35,10 +35,10 @@ export default function YourCartTypingAnimation() {
           setText(prev => prev.slice(0, -1));
         }, BACKSPACE_SPEED);
       } else {
-        // Now *fully reset typing* for next role
+     
         timer = setTimeout(() => {
           setRoleIndex((roleIndex + 1) % roles.length);
-          setTypingIndex(staticPrefix.length); // start right after static
+          setTypingIndex(staticPrefix.length); 
           setText(staticPrefix);
           setPhase("typingRole");
         }, 400);
