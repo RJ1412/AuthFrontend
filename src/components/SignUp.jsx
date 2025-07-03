@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 import OtpForm from "./OtpForm";
-import SignUpForm from "./SignupForm";
+import SignUpForm from "./SignUpForm";
 
 export default function SignUp({ onClose }) {
   const [emailForOtp, setEmailForOtp] = useState(null);
